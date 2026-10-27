@@ -23,7 +23,7 @@
     .hero:before { content:''; position:absolute; inset:0; z-index:1; background:linear-gradient(90deg,#f8fbfd 0%,rgba(248,251,253,.97) 30%,rgba(248,251,253,.82) 44%,rgba(248,251,253,.2) 64%,transparent 76%); }
     .hero:after { display:none; }
     .hero-cover { position:absolute; z-index:0; inset:0 0 0 auto; width:68%; height:100%; object-fit:cover; object-position:58% 68%; filter:contrast(1.07) saturate(1.08); transform:scale(1.01); }
-    .hero-inner { position:relative; z-index:2; width:100%; max-width:1120px; }
+    .hero-inner { position:relative; z-index:2; width:100%; max-width:none; }
     .eyebrow,.section-kicker { color:var(--blue-dark); font-size:10px; font-weight:700; letter-spacing:.19em; text-transform:uppercase; }
     .eyebrow { display:flex; gap:12px; align-items:center; }
     .eyebrow:before { content:''; width:27px; height:2px; background:var(--blue); }
@@ -33,6 +33,7 @@
     .hero-copy { max-width:420px; margin:0; color:#53616e; font-size:14px; line-height:1.8; }
     .text-link { display:flex; gap:12px; align-items:center; width:max-content; padding-bottom:7px; border-bottom:1px solid rgba(22,139,210,.45); color:var(--blue-dark); font-size:10px; letter-spacing:.14em; text-transform:uppercase; }
     .text-link span { font-size:16px; }
+    .hero-bottom .text-link { position:absolute; right:0; bottom:-56px; padding:14px 18px; border:1px solid #d7e7f1; background:#fff; box-shadow:0 8px 24px rgba(19,60,86,.14); }
     .hall { padding:76px clamp(24px,7vw,100px); background:#f3f8fb; }
     .hall-inner { max-width:1240px; margin:auto; display:grid; grid-template-columns:minmax(0,1.3fr) minmax(260px,.7fr); gap:clamp(28px,5vw,70px); align-items:center; }
     .hall-photo { margin:0; padding:8px; background:#fff; box-shadow:0 18px 48px rgba(20,50,70,.12); }
@@ -180,7 +181,7 @@
       h1 { font-size:clamp(36px,9.2vw,56px); }
       .hero-bottom { display:block; }
       .hero-copy { max-width:345px; font-size:13px; }
-      .hero-bottom .text-link { margin-top:25px; }
+      .hero-bottom .text-link { right:0; bottom:-46px; margin-top:0; }
       .hall { padding:54px 18px; }
       .hall-inner { grid-template-columns:1fr; gap:24px; }
       .ticker-track { justify-content:flex-start; padding-left:24px; gap:22px; }
