@@ -3,24 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#edf5fb">
+  <meta name="theme-color" content="#ffffff">
   <meta name="description" content="Arena Celeste: Salón de Usos Múltiples de A.A. Estudiantes de Río Cuarto, para shows, celebraciones y encuentros.">
   <title>Arena Celeste — Un espacio para cada plan</title>
   <style>
     :root { --blue:#168bd2; --blue-dark:#0873b7; --ink:#17212a; --muted:#63717d; --pale:#eff7fc; --line:#e4ebf0; --sans:'Avenir Next',Avenir,'Segoe UI',Arial,sans-serif; }
     * { box-sizing:border-box; }
     html { scroll-behavior:smooth; }
-    body { margin:0; color:var(--ink); background:#edf5fb; font-family:var(--sans); -webkit-font-smoothing:antialiased; }
+    body { margin:0; color:var(--ink); background:#fff; font-family:var(--sans); -webkit-font-smoothing:antialiased; }
     a { color:inherit; text-decoration:none; }
     .topline { height:4px; background:linear-gradient(90deg,#168bd2,#9bd3f2 52%,#168bd2); }
-    header { min-height:92px; padding:12px clamp(22px,6vw,92px); display:flex; align-items:center; justify-content:space-between; gap:25px; border-bottom:1px solid #edf0f2; background:#edf5fb; }
+    header { min-height:92px; padding:12px clamp(22px,6vw,92px); display:flex; align-items:center; justify-content:space-between; gap:25px; border-bottom:1px solid #edf0f2; background:#fff; }
     .brand { display:block; width:clamp(160px,19vw,230px); line-height:0; }
     .brand img { display:block; width:100%; height:auto; }
     nav { display:flex; align-items:center; gap:34px; color:#41505d; font-size:10px; letter-spacing:.12em; text-transform:uppercase; }
     nav a:hover { color:var(--blue); }
     .nav-cta { border:1px solid var(--blue); padding:12px 16px; color:var(--blue-dark); }
     .hero { min-height:600px; height:min(720px,82vh); padding:80px clamp(24px,10vw,150px); display:flex; align-items:flex-end; position:relative; overflow:hidden; background:#dceefa; }
-    .hero:before { content:''; position:absolute; inset:0; z-index:1; background:linear-gradient(90deg,#e5f1fa 0%,rgba(226,241,251,.97) 30%,rgba(226,241,251,.82) 44%,rgba(226,241,251,.2) 64%,transparent 76%); }
+    .hero:before { content:''; position:absolute; inset:0; z-index:1; background:linear-gradient(90deg,#f8fbfd 0%,rgba(248,251,253,.97) 30%,rgba(248,251,253,.82) 44%,rgba(248,251,253,.2) 64%,transparent 76%); }
     .hero:after { display:none; }
     .hero-cover { position:absolute; z-index:0; inset:0 0 0 auto; width:68%; height:100%; object-fit:cover; object-position:58% 68%; filter:contrast(1.07) saturate(1.08); transform:scale(1.01); }
     .hero-inner { position:relative; z-index:2; width:100%; max-width:none; }
@@ -33,10 +33,10 @@
     .hero-copy { max-width:420px; margin:0; color:#53616e; font-size:14px; line-height:1.8; }
     .text-link { display:flex; gap:12px; align-items:center; width:max-content; padding-bottom:7px; border-bottom:1px solid rgba(22,139,210,.45); color:var(--blue-dark); font-size:10px; letter-spacing:.14em; text-transform:uppercase; }
     .text-link span { font-size:16px; }
-    .hero-bottom .text-link { position:absolute; right:-80px; bottom:-56px; padding:14px 18px; border:1px solid #d7e7f1; background:#edf5fb; box-shadow:0 8px 24px rgba(19,60,86,.14); }
+    .hero-bottom .text-link { position:absolute; right:-80px; bottom:-56px; padding:14px 18px; border:1px solid #d7e7f1; background:#fff; box-shadow:0 8px 24px rgba(19,60,86,.14); }
     .hall { padding:76px clamp(24px,7vw,100px); background:#f3f8fb; }
     .hall-inner { max-width:1240px; margin:auto; display:grid; grid-template-columns:minmax(0,1.3fr) minmax(260px,.7fr); gap:clamp(28px,5vw,70px); align-items:center; }
-    .hall-photo { margin:0; padding:8px; background:#edf5fb; box-shadow:0 18px 48px rgba(20,50,70,.12); }
+    .hall-photo { margin:0; padding:8px; background:#fff; box-shadow:0 18px 48px rgba(20,50,70,.12); }
     .hall-photo img { display:block; width:100%; aspect-ratio:4/3; object-fit:cover; }
     .hall-copy h2 { margin:0 0 16px; font-size:clamp(34px,4.4vw,56px); line-height:1; letter-spacing:-.055em; }
     .hall-copy p:last-child { max-width:400px; color:#596a77; font-size:14px; line-height:1.8; }
@@ -52,9 +52,9 @@
     h2 { margin:0; font-size:clamp(42px,6vw,74px); line-height:.95; letter-spacing:-.065em; font-weight:750; }
     .section-note { max-width:300px; margin:0 0 3px; color:var(--muted); font-size:12px; line-height:1.8; }
     .cards { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
-    .card { min-height:340px; position:relative; overflow:hidden; padding:25px; display:flex; flex-direction:column; justify-content:space-between; background:linear-gradient(145deg,#eaf4fb,#eaf4fa); border:1px solid var(--line); }
+    .card { min-height:340px; position:relative; overflow:hidden; padding:25px; display:flex; flex-direction:column; justify-content:space-between; background:linear-gradient(145deg,#f6fafc,#eaf4fa); border:1px solid var(--line); }
     .card:nth-child(2) { background:linear-gradient(145deg,#edf8fd,#dceff9); }
-    .card:nth-child(3) { background:linear-gradient(145deg,#f6f8fa,#e4f0f8); }
+    .card:nth-child(3) { background:linear-gradient(145deg,#f6f8fa,#eaf0f4); }
     .card:before { content:''; position:absolute; width:280px; height:280px; border:1px solid rgba(22,139,210,.17); border-radius:50%; right:-125px; top:68px; box-shadow:0 0 0 25px rgba(22,139,210,.035),0 0 0 60px rgba(22,139,210,.022); }
     .card-top,.card-body,.card-foot { z-index:1; position:relative; }
     .card-top,.card-foot { display:flex; justify-content:space-between; align-items:center; gap:14px; text-transform:uppercase; font-size:9px; letter-spacing:.14em; }
@@ -66,7 +66,7 @@
     .card-body p { max-width:245px; margin:0; color:#60717e; font-size:11px; line-height:1.7; }
     .card-foot { padding-top:15px; border-top:1px solid rgba(22,139,210,.2); color:#627482; }
     .card-foot b { color:var(--ink); font-weight:700; }
-    .upcoming-event { display:grid; grid-template-columns:minmax(220px,.7fr) minmax(0,1fr); gap:clamp(26px,5vw,68px); align-items:center; padding:clamp(20px,4vw,38px); border:1px solid var(--line); background:linear-gradient(130deg,#eaf4fb,#e7f2f9); transition:transform .2s ease,box-shadow .2s ease; }
+    .upcoming-event { display:grid; grid-template-columns:minmax(220px,.7fr) minmax(0,1fr); gap:clamp(26px,5vw,68px); align-items:center; padding:clamp(20px,4vw,38px); border:1px solid var(--line); background:linear-gradient(130deg,#f4f9fc,#e7f2f9); transition:transform .2s ease,box-shadow .2s ease; }
     .upcoming-event:hover { transform:translateY(-3px); box-shadow:0 16px 36px rgba(23,60,86,.1); }
     .upcoming-art { width:min(100%,300px); justify-self:center; overflow:hidden; background:#101724; }
     .upcoming-art img { display:block; width:100%; height:auto; }
@@ -95,7 +95,7 @@
     .festival-video .event-tag { margin-bottom:18px; }
     .festival-video .instagram-media { width:100%!important; max-width:540px!important; }
     .festival-video-link { display:inline-block; margin-top:16px; color:var(--blue-dark); font-size:10px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; }
-    .event-story { padding:92px clamp(24px,9vw,136px) 100px; background:#e8f3fa; }
+    .event-story { padding:92px clamp(24px,9vw,136px) 100px; background:#f6f9fb; }
     .event-grid { max-width:1160px; margin:auto; display:grid; grid-template-columns:minmax(0,1.05fr) minmax(290px,.75fr); gap:clamp(35px,7vw,100px); align-items:center; }
     .event-tag { display:inline-block; margin:0 0 18px; color:var(--blue-dark); font-size:10px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; }
     .event-copy h2 { margin:0 0 18px; font-size:clamp(52px,7vw,88px); color:var(--ink); }
@@ -107,8 +107,8 @@
     .event-attendance span { max-width:150px; color:#63717d; font-size:11px; line-height:1.5; text-transform:uppercase; letter-spacing:.08em; }
     .event-poster { max-width:430px; justify-self:end; padding:8px; background:#101010; box-shadow:0 22px 55px rgba(18,35,48,.18); }
     .event-poster img { display:block; width:100%; height:auto; }
-    .event-history { padding:78px clamp(24px,9vw,136px); background:#edf5fb; }
-    .past-event { max-width:1160px; margin:auto; border:1px solid #dfe8ee; background:#eaf4fb; }
+    .event-history { padding:78px clamp(24px,9vw,136px); background:#fff; }
+    .past-event { max-width:1160px; margin:auto; border:1px solid #dfe8ee; background:#f6fafc; }
     .past-event summary { display:grid; grid-template-columns:112px minmax(0,1fr) auto; align-items:center; gap:15px 26px; padding:26px clamp(20px,4vw,38px); cursor:pointer; list-style:none; }
     .past-event summary::-webkit-details-marker { display:none; }
     .past-event[open] summary { border-bottom:1px solid #dfe8ee; }
@@ -132,32 +132,32 @@
     .space-inner { max-width:1040px; margin:auto; display:grid; grid-template-columns:1fr 1fr; gap:45px; align-items:center; }
     .space h2 { max-width:480px; }
     .space-copy { color:#53616e; font-size:14px; line-height:1.9; }
-    .facilities { padding:82px clamp(24px,9vw,136px) 96px; background:#edf5fb; }
+    .facilities { padding:82px clamp(24px,9vw,136px) 96px; background:#fff; }
     .facilities-inner { max-width:1160px; margin:auto; }
     .facilities-heading { max-width:760px; margin:0; font-size:clamp(27px,3.4vw,40px); line-height:1.12; letter-spacing:-.04em; font-weight:600; }
     .facilities-copy { max-width:760px; margin:18px 0 0; color:#586a78; font-size:14px; line-height:1.85; }
     .facility-gallery { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; margin-top:34px; }
-    .facility-gallery figure { margin:0; padding:9px; border:1px solid #e4ebf0; background:#e5f1fa; }
+    .facility-gallery figure { margin:0; padding:9px; border:1px solid #e4ebf0; background:#f8fbfd; }
     .facility-gallery img { display:block; width:100%; aspect-ratio:4/5; object-fit:cover; }
-    .facility-gallery figcaption { padding:12px 5px 5px; color:#53616e; font-size:10px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; }    .instagram { padding:100px 24px 105px; text-align:center; background:#edf5fb; }
+    .facility-gallery figcaption { padding:12px 5px 5px; color:#53616e; font-size:10px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; }    .instagram { padding:100px 24px 105px; text-align:center; background:#fff; }
     .instagram .section-kicker { margin-bottom:14px; }
     .instagram h2 { font-size:clamp(38px,5vw,60px); }
     .instagram-intro { max-width:520px; margin:17px auto 34px; color:var(--muted); font-size:13px; line-height:1.7; }
-    .ig-frame { max-width:760px; min-height:260px; margin:0 auto 25px; padding:22px; display:flex; justify-content:center; align-items:flex-start; border:1px solid var(--line); background:#edf5fb; }
+    .ig-frame { max-width:760px; min-height:260px; margin:0 auto 25px; padding:22px; display:flex; justify-content:center; align-items:flex-start; border:1px solid var(--line); background:#fff; }
     .instagram-media { margin:0 auto!important; min-width:280px!important; }
     .ig-button { display:inline-flex; align-items:center; justify-content:center; gap:10px; padding:14px 20px; color:#fff; background:var(--blue); font-size:10px; letter-spacing:.13em; text-transform:uppercase; transition:background .2s ease; }
     .ig-button:hover { background:var(--blue-dark); }
-    .contact { padding:86px 24px 96px; background:#e5f1fa; }
+    .contact { padding:86px 24px 96px; background:#f5f9fc; }
     .contact-inner { max-width:760px; margin:0 auto; }
     .contact-head { margin-bottom:30px; text-align:center; }
     .contact-head .section-kicker { margin-bottom:14px; }
     .contact-head h2 { font-size:clamp(40px,5vw,58px); }
     .contact-head p:last-child { max-width:470px; margin:14px auto 0; color:var(--muted); font-size:13px; line-height:1.7; }
-    .contact-form { display:grid; grid-template-columns:1fr 1fr; gap:18px; padding:clamp(22px,5vw,38px); background:#edf5fb; border:1px solid var(--line); }
+    .contact-form { display:grid; grid-template-columns:1fr 1fr; gap:18px; padding:clamp(22px,5vw,38px); background:#fff; border:1px solid var(--line); }
     .form-field { display:flex; flex-direction:column; gap:8px; }
     .form-field.full { grid-column:1/-1; }
     .form-field label { color:#344655; font-size:10px; font-weight:700; letter-spacing:.09em; text-transform:uppercase; }
-    .form-field input,.form-field textarea { width:100%; border:1px solid #d8e1e8; border-radius:0; padding:13px 14px; color:var(--ink); background:#edf5fb; font:inherit; font-size:13px; outline:none; }
+    .form-field input,.form-field textarea { width:100%; border:1px solid #d8e1e8; border-radius:0; padding:13px 14px; color:var(--ink); background:#fff; font:inherit; font-size:13px; outline:none; }
     .form-field input:focus,.form-field textarea:focus { border-color:var(--blue); box-shadow:0 0 0 3px rgba(22,139,210,.1); }
     .form-field textarea { min-height:126px; resize:vertical; }
     .form-actions { grid-column:1/-1; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:16px; margin-top:3px; }
@@ -182,7 +182,7 @@
       .hero { min-height:570px; height:78vh; padding:60px 24px; }
 
       .hero-cover { inset:0; width:100%; object-position:57% 68%; }
-      .hero:before { background:linear-gradient(180deg,rgba(226,241,251,.94) 0%,rgba(226,241,251,.83) 53%,rgba(226,241,251,.38) 100%); }
+      .hero:before { background:linear-gradient(180deg,rgba(248,251,253,.94) 0%,rgba(248,251,253,.83) 53%,rgba(248,251,253,.38) 100%); }
       h1 { font-size:clamp(36px,9.2vw,56px); }
       .hero-bottom { display:block; }
       .hero-copy { max-width:345px; font-size:13px; }
@@ -195,7 +195,7 @@
       .section-note { margin-top:17px; }
       .cards { grid-template-columns:1fr; gap:13px; }
       .card { min-height:310px; }
-      .upcoming-event { display:grid; grid-template-columns:minmax(220px,.7fr) minmax(0,1fr); gap:clamp(26px,5vw,68px); align-items:center; padding:clamp(20px,4vw,38px); border:1px solid var(--line); background:linear-gradient(130deg,#eaf4fb,#e7f2f9); transition:transform .2s ease,box-shadow .2s ease; }
+      .upcoming-event { display:grid; grid-template-columns:minmax(220px,.7fr) minmax(0,1fr); gap:clamp(26px,5vw,68px); align-items:center; padding:clamp(20px,4vw,38px); border:1px solid var(--line); background:linear-gradient(130deg,#f4f9fc,#e7f2f9); transition:transform .2s ease,box-shadow .2s ease; }
     .upcoming-event:hover { transform:translateY(-3px); box-shadow:0 16px 36px rgba(23,60,86,.1); }
     .upcoming-art { width:min(100%,300px); justify-self:center; overflow:hidden; background:#101724; }
     .upcoming-art img { display:block; width:100%; height:auto; }
@@ -325,7 +325,7 @@
       </div>
       <div class="festival-video">
         <p class="event-tag">Así se vivió Jirafa Fest</p>
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DbRnhSKsVAS/" data-instgrm-version="14" style="background:#edf5fb;border:0;border-radius:4px;box-shadow:none;margin:0 auto;max-width:540px;min-width:280px;padding:0;width:100%;"></blockquote>
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DbRnhSKsVAS/" data-instgrm-version="14" style="background:#fff;border:0;border-radius:4px;box-shadow:none;margin:0 auto;max-width:540px;min-width:280px;padding:0;width:100%;"></blockquote>
         <a class="festival-video-link" href="https://www.instagram.com/p/DbRnhSKsVAS/" target="_blank" rel="noopener noreferrer">Ver video en Instagram ↗</a>
       </div>
     </section>
@@ -353,7 +353,7 @@
           </div>
           <div class="past-event-video">
             <p class="event-tag">Así se vivió la noche</p>
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DdP47K4MQXW/" data-instgrm-version="14" style="background:#edf5fb;border:0;border-radius:4px;box-shadow:none;margin:0 auto;max-width:540px;min-width:280px;padding:0;width:100%;"></blockquote>
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DdP47K4MQXW/" data-instgrm-version="14" style="background:#fff;border:0;border-radius:4px;box-shadow:none;margin:0 auto;max-width:540px;min-width:280px;padding:0;width:100%;"></blockquote>
             <a class="festival-video-link" href="https://www.instagram.com/p/DdP47K4MQXW/" target="_blank" rel="noopener noreferrer">Ver video en Instagram ↗</a>
           </div>
         </div>
@@ -399,7 +399,7 @@
       <h2>@arena.celestesum</h2>
       <p class="instagram-intro">Mirá las novedades, conocé el espacio y descubrí lo que se viene en Arena Celeste.</p>
       <div class="ig-frame">
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/arena.celestesum/" data-instgrm-version="14" style="background:#edf5fb;border:0;border-radius:4px;box-shadow:none;margin:0;max-width:540px;min-width:280px;padding:0;width:100%;"></blockquote>
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/arena.celestesum/" data-instgrm-version="14" style="background:#fff;border:0;border-radius:4px;box-shadow:none;margin:0;max-width:540px;min-width:280px;padding:0;width:100%;"></blockquote>
       </div>
       <a class="ig-button" href="https://www.instagram.com/arena.celestesum/" target="_blank" rel="noopener noreferrer">Ver Instagram <span>↗</span></a>
     </section>
