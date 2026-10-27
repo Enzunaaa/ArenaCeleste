@@ -79,6 +79,23 @@
     .instagram-media { margin:0 auto!important; min-width:280px!important; }
     .ig-button { display:inline-flex; align-items:center; justify-content:center; gap:10px; padding:14px 20px; color:#fff; background:var(--blue); font-size:10px; letter-spacing:.13em; text-transform:uppercase; transition:background .2s ease; }
     .ig-button:hover { background:var(--blue-dark); }
+    .contact { padding:86px 24px 96px; background:#f5f9fc; }
+    .contact-inner { max-width:760px; margin:0 auto; }
+    .contact-head { margin-bottom:30px; text-align:center; }
+    .contact-head .section-kicker { margin-bottom:14px; }
+    .contact-head h2 { font-size:clamp(40px,5vw,58px); }
+    .contact-head p:last-child { max-width:470px; margin:14px auto 0; color:var(--muted); font-size:13px; line-height:1.7; }
+    .contact-form { display:grid; grid-template-columns:1fr 1fr; gap:18px; padding:clamp(22px,5vw,38px); background:#fff; border:1px solid var(--line); }
+    .form-field { display:flex; flex-direction:column; gap:8px; }
+    .form-field.full { grid-column:1/-1; }
+    .form-field label { color:#344655; font-size:10px; font-weight:700; letter-spacing:.09em; text-transform:uppercase; }
+    .form-field input,.form-field textarea { width:100%; border:1px solid #d8e1e8; border-radius:0; padding:13px 14px; color:var(--ink); background:#fff; font:inherit; font-size:13px; outline:none; }
+    .form-field input:focus,.form-field textarea:focus { border-color:var(--blue); box-shadow:0 0 0 3px rgba(22,139,210,.1); }
+    .form-field textarea { min-height:126px; resize:vertical; }
+    .form-actions { grid-column:1/-1; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:16px; margin-top:3px; }
+    .form-note { margin:0; color:#778692; font-size:10px; line-height:1.5; }
+    .contact-submit { display:inline-flex; align-items:center; justify-content:center; gap:10px; border:0; padding:14px 20px; color:#fff; background:var(--blue); font:700 10px var(--sans); letter-spacing:.12em; text-transform:uppercase; cursor:pointer; }
+    .contact-submit:hover { background:var(--blue-dark); }
     footer { padding:38px clamp(24px,6vw,92px); display:flex; justify-content:space-between; align-items:center; gap:22px; background:#17212a; color:#fff; }
     .foot-brand { font-size:19px; font-weight:800; letter-spacing:-.04em; }
     footer p { margin:0; color:rgba(255,255,255,.66); font-size:10px; }
@@ -108,6 +125,7 @@
       .space { padding:72px 24px; }
       .space-inner { grid-template-columns:1fr; gap:16px; }
       .instagram { padding:78px 18px; }
+      .contact { padding:70px 18px; } .contact-form { grid-template-columns:1fr; gap:16px; } .form-field.full,.form-actions { grid-column:auto; } .form-actions { align-items:stretch; flex-direction:column; } .contact-submit { width:100%; }
       .ig-frame { padding:12px 5px; }
       footer { flex-direction:column; align-items:flex-start; padding:34px 24px; }
     }
@@ -117,7 +135,7 @@
   <div class="topline"></div>
   <header>
     <a class="brand" href="#inicio" aria-label="Arena Celeste, inicio"><img src="Arena%20celeste%20logo-fondo%20transparente.png" onerror="this.onerror=null;this.src='arena-celeste-logo.jpg'" alt="Arena Celeste"></a>
-    <nav aria-label="Navegación principal"><a href="#eventos">Eventos</a><a href="#espacio">El espacio</a><a class="nav-cta" href="#instagram">Instagram</a></nav>
+    <nav aria-label="Navegación principal"><a href="#eventos">Eventos</a><a href="#espacio">El espacio</a><a href="#instagram">Instagram</a><a class="nav-cta" href="#contacto">Contacto</a></nav>
   </header>
   <main>
     <section class="hero" id="inicio">
@@ -164,11 +182,37 @@
       </div>
       <a class="ig-button" href="https://www.instagram.com/arena.celestesum/" target="_blank" rel="noopener noreferrer">Ver Instagram <span>↗</span></a>
     </section>
-  </main>
+    <section class="contact" id="contacto">
+      <div class="contact-inner">
+        <div class="contact-head"><p class="section-kicker">Hablemos</p><h2>Contacto</h2><p>Dejanos tu consulta y te respondemos por WhatsApp.</p></div>
+        <form class="contact-form" id="contact-form">
+          <div class="form-field"><label for="contact-name">Nombre y apellido</label><input id="contact-name" name="name" type="text" autocomplete="name" required></div>
+          <div class="form-field"><label for="contact-phone">Número de contacto</label><input id="contact-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required></div>
+          <div class="form-field full"><label for="contact-message">Consulta</label><textarea id="contact-message" name="consultation" required></textarea></div>
+          <div class="form-actions"><p class="form-note">Se abrirá WhatsApp con tu mensaje listo para enviar.</p><button class="contact-submit" type="submit">Enviar por WhatsApp <span>↗</span></button></div>
+        </form>
+      </div>
+    </section>  </main>
   <footer><a class="foot-brand" href="#inicio">Arena Celeste</a><p>Shows, celebraciones y encuentros.</p><a class="social" href="https://www.instagram.com/arena.celestesum/" target="_blank" rel="noopener noreferrer">Instagram ↗</a></footer>
   <script async src="https://www.instagram.com/embed.js"></script>
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+      if (!event.currentTarget.reportValidity()) return;
+      const data = new FormData(event.currentTarget);
+      const message = [
+        'Hola, Arena Celeste.',
+        `Nombre y apellido: ${data.get('name')}`,
+        `Consulta: ${data.get('consultation')}`,
+        `Número de contacto: ${data.get('phone')}`
+      ].join('\n');
+      const url = `https://wa.me/5493584363809?text=${encodeURIComponent(message)}`;
+      window.open(url, '_blank', 'noopener,noreferrer');
+    });
+  </script>
 </body>
 </html>
+
 
 
 
