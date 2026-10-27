@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
   <meta name="theme-color" content="#ffffff">
   <meta name="description" content="Arena Celeste: Salón de Usos Múltiples de A.A. Estudiantes de Río Cuarto, para shows, celebraciones y encuentros.">
   <title>Arena Celeste — Un espacio para cada plan</title>
@@ -291,7 +292,22 @@
     .venue-interior figcaption { padding:11px 5px 3px; color:#566c7b; font-size:10px; letter-spacing:.05em; }
     .versatility-note { max-width:1240px; margin:30px auto 0; padding-top:19px; border-top:1px solid rgba(8,115,183,.2); color:#0873b7; font-size:13px; font-style:italic; line-height:1.7; }
     @media(max-width:760px) { .venue-banner { grid-template-columns:1fr; gap:25px; padding:40px 22px; } .venue-exterior { min-height:260px; } .venue-exterior img { min-height:260px; max-height:330px; object-position:center 42%; } .venue-facts { grid-template-columns:repeat(2,minmax(0,1fr)); gap:23px 18px; padding:28px 22px; } .venue-fact strong,.venue-fact a { font-size:14px; } .versatility-panel { padding:54px 22px; } .versatility-layout { grid-template-columns:1fr; gap:26px; } }
-    @media(max-width:420px) { .venue-facts { grid-template-columns:1fr; } .event-types { grid-template-columns:1fr; } }  </style>
+    @media(max-width:420px) { .venue-facts { grid-template-columns:1fr; } .event-types { grid-template-columns:1fr; } }    .disciplines-section { padding:82px clamp(22px,7vw,100px) 90px; background-color:#eaf4fb; background-image:radial-gradient(circle at 10% 15%,rgba(54,151,204,.1),transparent 32%),repeating-linear-gradient(135deg,rgba(18,97,147,.018) 0 1px,transparent 1px 11px); }
+    .disciplines-inner { max-width:1240px; margin:auto; }
+    .disciplines-heading { max-width:760px; margin:0 auto 32px; text-align:center; }
+    .disciplines-heading .section-kicker { margin-bottom:12px; }
+    .disciplines-heading h2 { font-size:clamp(36px,5vw,60px); }
+    .disciplines-heading > p:last-child { max-width:670px; margin:17px auto 0; color:#526675; font-size:14px; line-height:1.75; }
+    .disciplines-poster { margin:0 auto 30px; padding:9px; background:#f7fbfe; border:1px solid #d8e6ef; box-shadow:0 18px 46px rgba(15,61,91,.14); }
+    .disciplines-poster img { display:block; width:100%; height:auto; }
+    .discipline-contacts { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+    .discipline-contact { min-height:145px; padding:20px; display:flex; flex-direction:column; align-items:flex-start; gap:9px; border:1px solid #d6e5ef; background:rgba(248,252,255,.88); transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease; }
+    .discipline-contact:hover { transform:translateY(-3px); border-color:#8bc8e9; box-shadow:0 12px 28px rgba(20,74,108,.12); }
+    .discipline-contact-label { color:#0873b7; font-size:9px; font-weight:700; letter-spacing:.15em; text-transform:uppercase; }
+    .discipline-contact strong { color:#17212a; font-size:21px; letter-spacing:-.025em; }
+    .discipline-contact-cta { margin-top:auto; color:#13824b; font-size:10px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
+    .futsal-contact-note { margin:19px 0 0; color:#5b6e7b; font-size:11px; text-align:center; }
+    @media(max-width:760px) { .disciplines-section { padding:62px 18px 70px; } .discipline-contacts { grid-template-columns:1fr; } .discipline-contact { min-height:125px; } }  </style>
 </head>
 <body>
   <div class="topline"></div>
@@ -477,6 +493,27 @@
           <div class="form-field full"><label for="contact-message">Consulta</label><textarea id="contact-message" name="consultation" required></textarea></div>
           <div class="form-actions"><p class="form-note">Se abrirá WhatsApp con tu mensaje listo para enviar.</p><button class="contact-submit" type="submit">Enviar por WhatsApp <span>↗</span></button></div>
         </form>
+      </div>
+    </section>      <section class="disciplines-section" id="disciplinas">
+      <div class="disciplines-inner">
+        <div class="disciplines-heading">
+          <p class="section-kicker">Deporte en Arena Celeste</p>
+          <h2>Disciplinas que nos unen.</h2>
+          <p>En nuestro salón se practican patín artístico, vóley, futsal y básquet. Para consultas, contactá a cada coordinación.</p>
+        </div>
+        <figure class="disciplines-poster"><img src="disciplinas-arena-celeste.jpg" alt="Arena Celeste: patín artístico, vóley, futsal y básquet; un solo club, una misma pasión" loading="lazy" decoding="async"></figure>
+        <div class="discipline-contacts" aria-label="Contactos de las disciplinas">
+          <a class="discipline-contact" href="https://wa.me/5493584114923?text=Hola%2C%20quisiera%20consultar%20por%20Pat%C3%ADn%20art%C3%ADstico%20en%20Arena%20Celeste." target="_blank" rel="noopener noreferrer">
+            <span class="discipline-contact-label">Coordinación de Patín</span><strong>3584114923</strong><span class="discipline-contact-cta">Consultar por WhatsApp ↗</span>
+          </a>
+          <a class="discipline-contact" href="https://wa.me/5493585092508?text=Hola%2C%20quisiera%20consultar%20por%20V%C3%B3ley%20en%20Arena%20Celeste." target="_blank" rel="noopener noreferrer">
+            <span class="discipline-contact-label">Coordinador de Vóley</span><strong>3585092508</strong><span class="discipline-contact-cta">Consultar por WhatsApp ↗</span>
+          </a>
+          <a class="discipline-contact" href="https://wa.me/5493584902129?text=Hola%2C%20quisiera%20consultar%20por%20B%C3%A1squet%20en%20Arena%20Celeste." target="_blank" rel="noopener noreferrer">
+            <span class="discipline-contact-label">Coordinador de Básquet</span><strong>3584902129</strong><span class="discipline-contact-cta">Consultar por WhatsApp ↗</span>
+          </a>
+        </div>
+        <p class="futsal-contact-note">Para consultas sobre Futsal, escribinos desde el formulario general de contacto.</p>
       </div>
     </section>  </main>
   <footer><a class="foot-brand" href="#inicio" aria-label="Arena Celeste, volver al inicio"><img src="Arena%20celeste%20logo-fondo%20transparente.png" alt="Arena Celeste"></a><p>Shows, celebraciones y encuentros.</p><a class="social" href="https://www.instagram.com/arena.celestesum/" target="_blank" rel="noopener noreferrer">Instagram ↗</a></footer>
