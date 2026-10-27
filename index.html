@@ -168,9 +168,9 @@
     .foot-brand { font-size:19px; font-weight:800; letter-spacing:-.04em; }
     footer p { margin:0; color:rgba(255,255,255,.66); font-size:10px; }
     .social { color:#a8dbf6; font-size:10px; letter-spacing:.12em; text-transform:uppercase; }
-    .instagram-float { position:fixed; z-index:20; right:24px; bottom:24px; display:inline-flex; align-items:center; gap:10px; padding:13px 17px; border:1px solid rgba(255,255,255,.75); border-radius:999px; background:linear-gradient(135deg,#168bd2,#0873b7); color:#fff; box-shadow:0 8px 24px rgba(10,66,103,.28); font-size:10px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; transition:transform .2s ease,box-shadow .2s ease; }
+    .instagram-float { position:fixed; z-index:20; right:24px; bottom:24px; width:52px; height:52px; display:inline-flex; align-items:center; justify-content:center; padding:0; border:1px solid rgba(255,255,255,.75); border-radius:50%; background:linear-gradient(135deg,#168bd2,#0873b7); color:#fff; box-shadow:0 8px 24px rgba(10,66,103,.28); font-size:0; transition:transform .2s ease,box-shadow .2s ease; }
     .instagram-float:hover { transform:translateY(-3px); box-shadow:0 12px 30px rgba(10,66,103,.34); }
-    .instagram-float svg { width:19px; height:19px; flex:none; }
+    .instagram-float svg { width:25px; height:25px; flex:none; }
     .instagram-float:focus-visible { outline:3px solid #17212a; outline-offset:3px; }
     @media(max-width:760px) {
       header { min-height:76px; padding:10px 20px; }
@@ -402,7 +402,6 @@
   <footer><a class="foot-brand" href="#inicio">Arena Celeste</a><p>Shows, celebraciones y encuentros.</p><a class="social" href="https://www.instagram.com/arena.celestesum/" target="_blank" rel="noopener noreferrer">Instagram ↗</a></footer>
   <a class="instagram-float" href="https://www.instagram.com/arena.celestesum/" target="_blank" rel="noopener noreferrer" aria-label="Visitar Instagram de Arena Celeste">
     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.25" fill="currentColor"/></svg>
-    <span>Instagram</span>
   </a>
   <script async src="https://www.instagram.com/embed.js"></script>
   <script>
