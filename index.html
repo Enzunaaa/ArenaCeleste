@@ -263,7 +263,35 @@
     .contact-form,.ig-frame { background:rgba(247,251,254,.86); }
     .facility-gallery figure { background:rgba(244,249,253,.88); }
     .hall-photo { background:rgba(246,250,253,.92); }    h1 .hero-title-white { color:#fff; text-shadow:0 2px 3px rgba(8,54,88,.78),0 0 16px rgba(8,67,105,.32); }
-  </style>
+    .venue-section { background:#edf5fb; }
+    .venue-banner { min-height:420px; padding:clamp(32px,6vw,76px) clamp(24px,7vw,100px); display:grid; grid-template-columns:minmax(0,1.2fr) minmax(280px,.8fr); align-items:center; gap:clamp(28px,6vw,80px); color:#fff; background:radial-gradient(ellipse at 80% 18%,rgba(42,117,171,.45),transparent 42%),linear-gradient(120deg,#101c29,#183b57); }
+    .venue-banner-copy { max-width:760px; }
+    .venue-eyebrow { display:flex; align-items:center; gap:12px; margin:0 0 20px; color:#9bd8f6; font-size:10px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; }
+    .venue-eyebrow:before { content:''; width:4px; height:18px; background:#65c6f2; }
+    .venue-banner h2 { margin:0 0 8px; color:#fff; font-size:clamp(48px,7vw,82px); letter-spacing:-.07em; }
+    .venue-tagline { margin:0 0 19px; color:#8ed8fb; font-size:clamp(20px,2.6vw,30px); font-weight:700; letter-spacing:-.035em; }
+    .venue-description { max-width:760px; margin:0; color:rgba(255,255,255,.84); font-size:15px; line-height:1.75; }
+    .venue-exterior { height:100%; min-height:320px; max-height:420px; margin:0; overflow:hidden; border:1px solid rgba(255,255,255,.2); box-shadow:0 18px 48px rgba(0,0,0,.25); }
+    .venue-exterior img { display:block; width:100%; height:100%; min-height:320px; max-height:420px; object-fit:cover; object-position:center 42%; }
+    .venue-facts { padding:34px clamp(24px,7vw,100px) 38px; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:25px 38px; background:#f7fbfe; border-bottom:1px solid #dce7ee; }
+    .venue-fact { padding-left:14px; border-left:2px solid #168bd2; }
+    .venue-fact span { display:block; margin-bottom:8px; color:#0873b7; font-size:9px; font-weight:700; letter-spacing:.19em; text-transform:uppercase; }
+    .venue-fact strong,.venue-fact a { color:#17212a; font-size:17px; font-weight:700; }
+    .venue-fact a { color:#0873b7; }
+    .versatility-panel { padding:clamp(54px,7vw,88px) clamp(24px,7vw,100px); background:linear-gradient(145deg,#eaf4fb,#f3f8fc); }
+    .versatility-heading { max-width:820px; margin:0 auto 30px; }
+    .versatility-heading .section-kicker { margin-bottom:12px; }
+    .versatility-heading h3 { margin:0; color:#17212a; font-size:clamp(34px,4.7vw,58px); line-height:1; letter-spacing:-.06em; }
+    .versatility-layout { max-width:1240px; margin:auto; display:grid; grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr); gap:clamp(28px,5vw,64px); align-items:center; }
+    .versatility-copy p { color:#4f6270; font-size:14px; line-height:1.8; }
+    .event-types { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; margin:22px 0 0; padding:0; list-style:none; }
+    .event-types li { padding:11px 13px; border:1px solid rgba(22,139,210,.16); background:rgba(255,255,255,.58); color:#243b4a; font-size:12px; font-weight:600; }
+    .venue-interior { margin:0; padding:8px; background:#f8fbfd; border:1px solid #d9e7ef; box-shadow:0 16px 40px rgba(22,61,87,.12); }
+    .venue-interior img { display:block; width:100%; aspect-ratio:4/3; object-fit:cover; }
+    .venue-interior figcaption { padding:11px 5px 3px; color:#566c7b; font-size:10px; letter-spacing:.05em; }
+    .versatility-note { max-width:1240px; margin:30px auto 0; padding-top:19px; border-top:1px solid rgba(8,115,183,.2); color:#0873b7; font-size:13px; font-style:italic; line-height:1.7; }
+    @media(max-width:760px) { .venue-banner { grid-template-columns:1fr; gap:25px; padding:40px 22px; } .venue-exterior { min-height:260px; } .venue-exterior img { min-height:260px; max-height:330px; object-position:center 42%; } .venue-facts { grid-template-columns:repeat(2,minmax(0,1fr)); gap:23px 18px; padding:28px 22px; } .venue-fact strong,.venue-fact a { font-size:14px; } .versatility-panel { padding:54px 22px; } .versatility-layout { grid-template-columns:1fr; gap:26px; } }
+    @media(max-width:420px) { .venue-facts { grid-template-columns:1fr; } .event-types { grid-template-columns:1fr; } }  </style>
 </head>
 <body>
   <div class="topline"></div>
@@ -283,13 +311,41 @@
         </div>
       </div>
     </section>
-    <section class="hall" id="espacio">
-      <div class="hall-inner">
-        <figure class="hall-photo"><img src="salon-interior.jpg" alt="Vista amplia del salón Arena Celeste preparado como espacio deportivo"></figure>
-        <div class="hall-copy"><p class="section-kicker">Conocé Arena Celeste</p><h2>Un espacio amplio para cada encuentro.</h2><p>Un salón versátil que se transforma para recibir shows, celebraciones, encuentros y muchas formas de compartir.</p></div>
+    <section class="venue-section" id="espacio">
+  <div class="venue-banner">
+    <div class="venue-banner-copy">
+      <p class="venue-eyebrow">Espacio multipropósito</p>
+      <h2>Arena Celeste</h2>
+      <p class="venue-tagline">Un espacio. Infinitas posibilidades.</p>
+      <p class="venue-description">El espacio multipropósito de Asociación Atlética Estudiantes de Río Cuarto, creado para convertirse en un nuevo punto de encuentro para el deporte, la cultura, el entretenimiento y el mundo empresarial.</p>
+    </div>
+    <figure class="venue-exterior"><img src="fachada-arena-celeste.png" alt="Fachada de Arena Celeste en la sede de Estudiantes de Río Cuarto"></figure>
+  </div>
+  <div class="venue-facts" aria-label="Características de Arena Celeste">
+    <div class="venue-fact"><span>Capacidad máxima</span><strong>Hasta 4.500 personas</strong></div>
+    <div class="venue-fact"><span>Tipo de espacio</span><strong>Multipropósito y adaptable</strong></div>
+    <div class="venue-fact"><span>Ubicación</span><strong>Sede del club, Río Cuarto</strong></div>
+    <div class="venue-fact"><span>Versatilidad</span><strong>Deportes, shows, ferias y empresas</strong></div>
+    <div class="venue-fact"><span>Instagram oficial</span><a href="https://www.instagram.com/arena.celestesum/" target="_blank" rel="noopener noreferrer">@arena.celestesum ↗</a></div>
+  </div>
+  <div class="versatility-panel">
+    <div class="versatility-heading">
+      <p class="section-kicker">Versatilidad sin límites</p>
+      <h3>Mucho más que un espacio deportivo</h3>
+    </div>
+    <div class="versatility-layout">
+      <div class="versatility-copy">
+        <p>Durante todo el año, Arena Celeste recibe distintas disciplinas deportivas y actividades vinculadas a la vida institucional de Estudiantes. Pero su infraestructura permite ir mucho más allá.</p>
+        <p>El espacio puede transformarse y adaptarse para recibir:</p>
+        <ul class="event-types">
+          <li>Shows musicales</li><li>Fiestas</li><li>Eventos sociales</li><li>Desfiles de moda</li><li>Ferias y exposiciones</li><li>Convenciones empresariales</li><li>Presentaciones de marca</li><li>Encuentros corporativos</li><li>Activaciones</li><li>Eventos deportivos</li>
+        </ul>
       </div>
-    </section>
-    <div class="ticker" aria-hidden="true"><div class="ticker-track"><span>Shows</span><i>✳</i><span>Celebraciones</span><i>✳</i><span>Encuentros</span><i>✳</i><span>Muchas posibilidades</span><i>✳</i><span>Shows</span></div></div>
+      <figure class="venue-interior"><img src="salon-interior.jpg" alt="Vista del interior amplio y adaptable de Arena Celeste"><figcaption>Un espacio que se prepara para cada encuentro.</figcaption></figure>
+    </div>
+    <p class="versatility-note">Cada propuesta puede tener una configuración diferente, aprovechando la amplitud y versatilidad del espacio.</p>
+  </div>
+</section><div class="ticker" aria-hidden="true"><div class="ticker-track"><span>Shows</span><i>✳</i><span>Celebraciones</span><i>✳</i><span>Encuentros</span><i>✳</i><span>Muchas posibilidades</span><i>✳</i><span>Shows</span></div></div>
     <section class="section" id="eventos">
       <div class="section-head">
         <div><p class="section-kicker">Próximo show · Arena Celeste</p><h2>Próximamente<br>en vivo</h2></div>
