@@ -61,12 +61,14 @@
     .upcoming-art img { display:block; width:100%; height:auto; }
     .upcoming-copy { max-width:570px; }
     .show-tag { display:inline-block; margin-bottom:17px; color:var(--blue-dark); font-size:10px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; }
+    .upcoming-date { margin:0 0 13px; color:var(--blue-dark)!important; font-size:clamp(21px,3vw,30px)!important; font-weight:750; line-height:1.15; letter-spacing:-.035em; }
     .upcoming-copy h3 { margin:0 0 15px; font-size:clamp(34px,5vw,62px); line-height:.95; letter-spacing:-.065em; font-weight:750; }
     .upcoming-copy p { color:#586a78; font-size:13px; line-height:1.7; }
     .event-link { display:inline-flex; margin-top:12px; padding-bottom:7px; gap:10px; border-bottom:1px solid rgba(22,139,210,.45); color:var(--blue-dark); font-size:10px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; }
     .show-detail { padding:88px clamp(24px,9vw,136px); background:#17212a; color:#fff; }
     .show-detail-grid { max-width:1160px; margin:auto; display:grid; grid-template-columns:minmax(0,1fr) minmax(280px,.68fr); gap:clamp(35px,7vw,92px); align-items:center; }
     .show-detail .section-kicker { color:#9bd3f2; }
+    .show-date-large { margin:0 0 15px; color:#9bd3f2; font-size:clamp(22px,3.3vw,32px); font-weight:750; line-height:1.15; letter-spacing:-.03em; }
     .show-detail h2 { margin:0 0 15px; color:#fff; font-size:clamp(44px,6vw,74px); }
     .show-intro { max-width:570px; margin:0 0 27px; color:rgba(255,255,255,.78); font-size:17px; line-height:1.6; }
     .show-facts { display:grid; gap:0; margin:0 0 27px; padding:0; list-style:none; border-top:1px solid rgba(255,255,255,.16); }
@@ -178,12 +180,14 @@
     .upcoming-art img { display:block; width:100%; height:auto; }
     .upcoming-copy { max-width:570px; }
     .show-tag { display:inline-block; margin-bottom:17px; color:var(--blue-dark); font-size:10px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; }
+
     .upcoming-copy h3 { margin:0 0 15px; font-size:clamp(34px,5vw,62px); line-height:.95; letter-spacing:-.065em; font-weight:750; }
     .upcoming-copy p { color:#586a78; font-size:13px; line-height:1.7; }
     .event-link { display:inline-flex; margin-top:12px; padding-bottom:7px; gap:10px; border-bottom:1px solid rgba(22,139,210,.45); color:var(--blue-dark); font-size:10px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; }
     .show-detail { padding:88px clamp(24px,9vw,136px); background:#17212a; color:#fff; }
     .show-detail-grid { max-width:1160px; margin:auto; display:grid; grid-template-columns:minmax(0,1fr) minmax(280px,.68fr); gap:clamp(35px,7vw,92px); align-items:center; }
     .show-detail .section-kicker { color:#9bd3f2; }
+
     .show-detail h2 { margin:0 0 15px; color:#fff; font-size:clamp(44px,6vw,74px); }
     .show-intro { max-width:570px; margin:0 0 27px; color:rgba(255,255,255,.78); font-size:17px; line-height:1.6; }
     .show-facts { display:grid; gap:0; margin:0 0 27px; padding:0; list-style:none; border-top:1px solid rgba(255,255,255,.16); }
@@ -241,14 +245,14 @@
       </div>
       <a class="upcoming-event" href="#cachumba-detalle" aria-label="Ver información de Cachumba en Arena Celeste">
         <div class="upcoming-art"><img src="cachumba-rio-cuarto.jpg" alt="Afiche de Cachumba en Arena Celeste, viernes 13 de noviembre"></div>
-        <div class="upcoming-copy"><span class="show-tag">Próximo show · Viernes 13 de noviembre</span><h3>Vuelve el Cachumba a Río Cuarto</h3><p>Una noche imperdible con el Turco Oliva y Cachumba.</p><span class="event-link">Ver información del evento <span>↘</span></span></div>
+        <div class="upcoming-copy"><span class="show-tag">Próximo show</span><h3>Vuelve Cachumba a Río Cuarto</h3><p class="upcoming-date">Viernes 13 de noviembre</p><p>Una noche imperdible con el Turco Oliva y Cachumba.</p><span class="event-link">Ver información del evento <span>↘</span></span></div>
       </a>
     </section>
     <section class="show-detail" id="cachumba-detalle">
       <div class="show-detail-grid">
         <div>
-          <p class="section-kicker">Viernes 13 de noviembre · Arena Celeste</p>
-          <h2>Vuelve el Cachumba a Río Cuarto</h2>
+          <p class="section-kicker">Próximo show · Arena Celeste</p><p class="show-date-large">Viernes 13 de noviembre</p>
+          <h2>Vuelve Cachumba a Río Cuarto</h2>
           <p class="show-intro">Llega una noche imperdible con el Turco Oliva y Cachumba.</p>
           <ul class="show-facts">
             <li><strong>Horario</strong>De 1:00 a 5:00 hs · 4 selecciones a puro cuarteto</li>
@@ -357,6 +361,8 @@
   </script>
 </body>
 </html>
+
+
 
 
 
