@@ -55,6 +55,18 @@
     .card-body p { max-width:245px; margin:0; color:#60717e; font-size:11px; line-height:1.7; }
     .card-foot { padding-top:15px; border-top:1px solid rgba(22,139,210,.2); color:#627482; }
     .card-foot b { color:var(--ink); font-weight:700; }
+    .event-story { padding:92px clamp(24px,9vw,136px) 100px; background:#f6f9fb; }
+    .event-grid { max-width:1160px; margin:auto; display:grid; grid-template-columns:minmax(0,1.05fr) minmax(290px,.75fr); gap:clamp(35px,7vw,100px); align-items:center; }
+    .event-tag { display:inline-block; margin:0 0 18px; color:var(--blue-dark); font-size:10px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; }
+    .event-copy h2 { margin:0 0 18px; font-size:clamp(52px,7vw,88px); color:var(--ink); }
+    .event-name { margin:0 0 22px; color:var(--blue-dark); font-size:13px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; }
+    .event-slogan { max-width:540px; margin:0 0 28px; color:#53616e; font-size:clamp(20px,2.5vw,27px); line-height:1.45; font-weight:600; letter-spacing:-.035em; }
+    .event-date { color:#667784; font-size:11px; font-weight:700; letter-spacing:.13em; text-transform:uppercase; }
+    .event-attendance { display:flex; align-items:baseline; gap:12px; margin-top:34px; padding-top:22px; border-top:1px solid #dce5eb; }
+    .event-attendance strong { color:var(--blue-dark); font-size:clamp(44px,6vw,65px); line-height:1; letter-spacing:-.07em; }
+    .event-attendance span { max-width:150px; color:#63717d; font-size:11px; line-height:1.5; text-transform:uppercase; letter-spacing:.08em; }
+    .event-poster { max-width:430px; justify-self:end; padding:8px; background:#101010; box-shadow:0 22px 55px rgba(18,35,48,.18); }
+    .event-poster img { display:block; width:100%; height:auto; }
     .space { padding:80px clamp(24px,9vw,136px); background:var(--pale); }
     .space-inner { max-width:1040px; margin:auto; display:grid; grid-template-columns:1fr 1fr; gap:45px; align-items:center; }
     .space h2 { max-width:480px; }
@@ -90,6 +102,9 @@
       .section-note { margin-top:17px; }
       .cards { grid-template-columns:1fr; gap:13px; }
       .card { min-height:310px; }
+      .event-story { padding:70px 22px; }
+      .event-grid { grid-template-columns:1fr; gap:34px; }
+      .event-poster { width:min(100%,430px); justify-self:center; }
       .space { padding:72px 24px; }
       .space-inner { grid-template-columns:1fr; gap:16px; }
       .instagram { padding:78px 18px; }
@@ -127,7 +142,19 @@
         <article class="card"><div class="card-top"><span class="soon">Próximamente</span><span class="card-number">03</span></div><div class="card-body"><h3>Tu próximo plan</h3><p>Volvé pronto para conocer la programación completa del salón.</p></div><div class="card-foot"><b>Arena Celeste</b><span>En preparación</span></div></article>
       </div>
     </section>
-    <section class="space" id="espacio"><div class="space-inner"><div><p class="section-kicker">Un salón, muchas posibilidades</p><h2>El lugar se adapta a cada encuentro.</h2></div><p class="space-copy">Arena Celeste es un espacio para vivir eventos de todo tipo: shows, celebraciones y reuniones. Acá cada ocasión encuentra su lugar.</p></div></section>
+    <section class="event-story" id="jirafa-fest">
+      <div class="event-grid">
+        <div class="event-copy">
+          <p class="event-tag">Nuestro primer evento realizado</p>
+          <h2>Jirafa<br>Fest</h2>
+          <p class="event-name">Jirafa Fest × Arena Celeste</p>
+          <p class="event-slogan">“Donde nos encontramos todos, a lo grande de verdad.”</p>
+          <p class="event-date">Sábado 25 de julio · Fiesta inaugural</p>
+          <div class="event-attendance"><strong>3.000+</strong><span>personas se reunieron en Arena Celeste</span></div>
+        </div>
+        <figure class="event-poster"><img src="jirafa-fest.jpg" alt="Afiche de Jirafa Fest junto a Arena Celeste: Día del Amigo, sábado 25 de julio"></figure>
+      </div>
+    </section>    <section class="space" id="espacio"><div class="space-inner"><div><p class="section-kicker">Un salón, muchas posibilidades</p><h2>El lugar se adapta a cada encuentro.</h2></div><p class="space-copy">Arena Celeste es un espacio para vivir eventos de todo tipo: shows, celebraciones y reuniones. Acá cada ocasión encuentra su lugar.</p></div></section>
     <section class="instagram" id="instagram">
       <p class="section-kicker">Seguinos en Instagram</p>
       <h2>@arena.celestesum</h2>
@@ -142,6 +169,8 @@
   <script async src="https://www.instagram.com/embed.js"></script>
 </body>
 </html>
+
+
 
 
 
