@@ -94,11 +94,37 @@
     .event-attendance span { max-width:150px; color:#63717d; font-size:11px; line-height:1.5; text-transform:uppercase; letter-spacing:.08em; }
     .event-poster { max-width:430px; justify-self:end; padding:8px; background:#101010; box-shadow:0 22px 55px rgba(18,35,48,.18); }
     .event-poster img { display:block; width:100%; height:auto; }
-    .space { padding:80px clamp(24px,9vw,136px); background:var(--pale); }
+    .event-history { padding:78px clamp(24px,9vw,136px); background:#fff; }
+    .past-event { max-width:1160px; margin:auto; border:1px solid #dfe8ee; background:#f6fafc; }
+    .past-event summary { display:grid; grid-template-columns:1fr auto; align-items:center; gap:15px 26px; padding:26px clamp(20px,4vw,38px); cursor:pointer; list-style:none; }
+    .past-event summary::-webkit-details-marker { display:none; }
+    .past-event[open] summary { border-bottom:1px solid #dfe8ee; }
+    .past-event-title { margin:0 0 8px; color:var(--ink); font-size:clamp(36px,5vw,58px); line-height:.95; letter-spacing:-.06em; }
+    .past-event-subtitle { margin:0; color:#63717d; font-size:12px; }
+    .past-event-status { justify-self:end; padding:10px 13px; background:#168bd2; color:white; font-size:9px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; }
+    .past-event-toggle { grid-column:1/-1; color:var(--blue-dark); font-size:10px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; }
+    .past-event-toggle:after { content:'＋ Ver detalles'; }
+    .past-event[open] .past-event-toggle:after { content:'− Cerrar detalles'; }
+    .past-event-content { display:grid; grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); gap:clamp(28px,5vw,65px); align-items:center; padding:clamp(24px,4vw,42px); }
+    .past-event-copy h3 { margin:0 0 15px; color:var(--ink); font-size:clamp(27px,3vw,38px); letter-spacing:-.045em; }
+    .past-event-copy p { color:#596a77; font-size:13px; line-height:1.8; }
+    .past-event-copy ul { margin:22px 0 0; padding:0; list-style:none; border-top:1px solid #dce5eb; }
+    .past-event-copy li { padding:12px 0; border-bottom:1px solid #dce5eb; color:#50616e; font-size:12px; line-height:1.6; }
+    .past-event-copy li strong { display:block; margin-bottom:3px; color:var(--blue-dark); font-size:9px; letter-spacing:.12em; text-transform:uppercase; }
+    .past-event-gallery { display:grid; grid-template-columns:1fr 1fr; gap:12px; align-items:start; }
+    .past-event-gallery figure { margin:0; padding:6px; background:#101724; }
+    .past-event-gallery img { display:block; width:100%; height:auto; }
+    .past-event-gallery figcaption { padding:9px 4px 4px; color:#fff; font-size:9px; font-weight:700; letter-spacing:.1em; text-align:center; text-transform:uppercase; }    .space { padding:80px clamp(24px,9vw,136px); background:var(--pale); }
     .space-inner { max-width:1040px; margin:auto; display:grid; grid-template-columns:1fr 1fr; gap:45px; align-items:center; }
     .space h2 { max-width:480px; }
     .space-copy { color:#53616e; font-size:14px; line-height:1.9; }
-    .instagram { padding:100px 24px 105px; text-align:center; background:#fff; }
+    .facilities { padding:82px clamp(24px,9vw,136px) 96px; background:#fff; }
+    .facilities-inner { max-width:1160px; margin:auto; }
+    .facilities-copy { max-width:760px; margin:18px 0 0; color:#586a78; font-size:14px; line-height:1.85; }
+    .facility-gallery { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; margin-top:34px; }
+    .facility-gallery figure { margin:0; padding:9px; border:1px solid #e4ebf0; background:#f8fbfd; }
+    .facility-gallery img { display:block; width:100%; aspect-ratio:4/5; object-fit:cover; }
+    .facility-gallery figcaption { padding:12px 5px 5px; color:#53616e; font-size:10px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; }    .instagram { padding:100px 24px 105px; text-align:center; background:#fff; }
     .instagram .section-kicker { margin-bottom:14px; }
     .instagram h2 { font-size:clamp(38px,5vw,60px); }
     .instagram-intro { max-width:520px; margin:17px auto 34px; color:var(--muted); font-size:13px; line-height:1.7; }
@@ -174,8 +200,15 @@
     .event-story { padding:70px 22px; }
       .event-grid { grid-template-columns:1fr; gap:34px; }
       .event-poster { width:min(100%,430px); justify-self:center; }
+      .event-history { padding:65px 18px; }
+      .past-event summary { grid-template-columns:1fr; }
+      .past-event-status { justify-self:start; }
+      .past-event-toggle { grid-column:auto; }
+      .past-event-content { grid-template-columns:1fr; gap:26px; }
+      .past-event-gallery { gap:8px; }
       .space { padding:72px 24px; }
       .space-inner { grid-template-columns:1fr; gap:16px; }
+      .facility-gallery { grid-template-columns:1fr; gap:13px; max-width:520px; margin:28px auto 0; }
       .instagram { padding:78px 18px; }
       .contact { padding:70px 18px; } .contact-form { grid-template-columns:1fr; gap:16px; } .form-field.full,.form-actions { grid-column:auto; } .form-actions { align-items:stretch; flex-direction:column; } .contact-submit { width:100%; }
       .ig-frame { padding:12px 5px; }
@@ -249,8 +282,43 @@
         <a class="festival-video-link" href="https://www.instagram.com/p/DbRnhSKsVAS/" target="_blank" rel="noopener noreferrer">Ver video en Instagram ↗</a>
       </div>
     </section>
-    <section class="space" id="espacio"><div class="space-inner"><div><p class="section-kicker">Un salón, muchas posibilidades</p><h2>Un espacio, infinitas formas de encontrarnos.</h2></div><p class="space-copy">Arena Celeste es un espacio para vivir eventos de todo tipo: shows, celebraciones y reuniones. Acá cada ocasión encuentra su lugar.</p></div></section>
-    <section class="instagram" id="instagram">
+    <section class="event-history" id="germain-evento">
+      <details class="past-event">
+        <summary>
+          <div><p class="event-tag">Segundo evento realizado</p><h2 class="past-event-title">GERMAIN</h2><p class="past-event-subtitle">“La Banda del Monstruo” · Viernes 11 de septiembre</p></div>
+          <span class="past-event-status">Sala llena · Entradas agotadas</span>
+          <span class="past-event-toggle" aria-hidden="true"></span>
+        </summary>
+        <div class="past-event-content">
+          <div class="past-event-copy">
+            <h3>Una noche inolvidable, a salón lleno.</h3>
+            <p>Después de hacer vibrar a todo el país, GERMAIN, “La Banda del Monstruo”, llegó nuevamente a Río Cuarto para una noche que fue inolvidable.</p>
+            <ul>
+              <li><strong>Fecha</strong>Viernes 11 de septiembre</li>
+              <li><strong>Lugar</strong>Club Estudiantes de Río Cuarto</li>
+              <li><strong>Formato</strong>Sector con mesas y sillas</li>
+              <li><strong>Convocatoria</strong>Salón colmado · Entradas agotadas</li>
+            </ul>
+          </div>
+          <div class="past-event-gallery">
+            <figure><img src="germain-arena-celeste.jpg" alt="Afiche del show de GERMAIN en Arena Celeste, viernes 11 de septiembre"><figcaption>GERMAIN en Arena Celeste</figcaption></figure>
+            <figure><img src="germain-entradas-agotadas.jpg" alt="Afiche de GERMAIN que anuncia entradas agotadas"><figcaption>Entradas agotadas</figcaption></figure>
+          </div>
+        </div>
+      </details>
+    </section>    <section class="space" id="espacio"><div class="space-inner"><div><p class="section-kicker">Un salón, muchas posibilidades</p><h2>Un espacio, infinitas formas de encontrarnos.</h2></div><p class="space-copy">Arena Celeste es un espacio para vivir eventos de todo tipo: shows, celebraciones y reuniones. Acá cada ocasión encuentra su lugar.</p></div></section>
+    <section class="facilities" id="servicios">
+      <div class="facilities-inner">
+        <p class="section-kicker">Comodidad para todos</p>
+        <h2>Todo listo para que vos solo te ocupes de disfrutar.</h2>
+        <p class="facilities-copy">Arena Celeste cuenta con varios baños amplios para mujeres y varones, con espacios adaptados para personas con discapacidad y preparados para acompañar eventos de gran convocatoria. Durante cada evento, nuestro equipo los mantiene limpios, cuidados y completamente equipados.</p>
+        <div class="facility-gallery">
+          <figure><img src="banos-arena-1.jpg" alt="Vista de los sanitarios y lavamanos de Arena Celeste"><figcaption>Espacios amplios y cómodos</figcaption></figure>
+          <figure><img src="banos-arena-2.jpg" alt="Sector de lavamanos y sanitarios de Arena Celeste"><figcaption>Baños equipados</figcaption></figure>
+          <figure><img src="banos-arena-3.jpg" alt="Cabinas sanitarias en Arena Celeste"><figcaption>Instalaciones cuidadas</figcaption></figure>
+        </div>
+      </div>
+    </section>    <section class="instagram" id="instagram">
       <p class="section-kicker">Seguinos en Instagram</p>
       <h2>@arena.celestesum</h2>
       <p class="instagram-intro">Mirá las novedades, conocé el espacio y descubrí lo que se viene en Arena Celeste.</p>
@@ -289,6 +357,8 @@
   </script>
 </body>
 </html>
+
+
 
 
 
