@@ -254,7 +254,15 @@
       *,*::before,*::after { transition-duration:.01ms!important; animation-duration:.01ms!important; animation-iteration-count:1!important; }
       a:hover,button:hover,.past-event summary:hover,.card:hover,.facility-gallery figure:hover,.past-event-gallery figure:hover,.hall-photo:hover { transform:none!important; }
     }
-  </style>
+    :root { --pale:#eaf4fb; }
+    body { background-color:#eaf4fb; background-image:radial-gradient(circle at 12% 12%,rgba(65,157,207,.12),transparent 32%),radial-gradient(circle at 88% 76%,rgba(23,116,172,.07),transparent 29%),repeating-linear-gradient(135deg,rgba(15,92,145,.022) 0 1px,transparent 1px 10px); background-attachment:fixed; }
+    header { background:rgba(242,248,253,.92); backdrop-filter:blur(12px); }
+    main > .section,main > .event-history,main > .instagram { background-color:#eef7fc; background-image:radial-gradient(circle at 8% 18%,rgba(63,156,206,.085),transparent 30%),repeating-linear-gradient(135deg,rgba(15,92,145,.018) 0 1px,transparent 1px 11px); }
+    main > .hall,main > .event-story,main > .facilities,main > .contact { background-color:#e5f1f9; background-image:radial-gradient(circle at 92% 14%,rgba(54,147,198,.1),transparent 30%),radial-gradient(circle at 12% 86%,rgba(34,113,170,.055),transparent 33%),repeating-linear-gradient(135deg,rgba(15,92,145,.02) 0 1px,transparent 1px 11px); }
+    .past-event { background:rgba(247,251,254,.88); }
+    .contact-form,.ig-frame { background:rgba(247,251,254,.86); }
+    .facility-gallery figure { background:rgba(244,249,253,.88); }
+    .hall-photo { background:rgba(246,250,253,.92); }  </style>
 </head>
 <body>
   <div class="topline"></div>
@@ -446,6 +454,7 @@
   </script>
 </body>
 </html>
+
 
 
 
