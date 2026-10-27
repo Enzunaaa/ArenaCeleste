@@ -55,6 +55,29 @@
     .card-body p { max-width:245px; margin:0; color:#60717e; font-size:11px; line-height:1.7; }
     .card-foot { padding-top:15px; border-top:1px solid rgba(22,139,210,.2); color:#627482; }
     .card-foot b { color:var(--ink); font-weight:700; }
+    .upcoming-event { display:grid; grid-template-columns:minmax(220px,.7fr) minmax(0,1fr); gap:clamp(26px,5vw,68px); align-items:center; padding:clamp(20px,4vw,38px); border:1px solid var(--line); background:linear-gradient(130deg,#f4f9fc,#e7f2f9); transition:transform .2s ease,box-shadow .2s ease; }
+    .upcoming-event:hover { transform:translateY(-3px); box-shadow:0 16px 36px rgba(23,60,86,.1); }
+    .upcoming-art { width:min(100%,300px); justify-self:center; overflow:hidden; background:#101724; }
+    .upcoming-art img { display:block; width:100%; height:auto; }
+    .upcoming-copy { max-width:570px; }
+    .show-tag { display:inline-block; margin-bottom:17px; color:var(--blue-dark); font-size:10px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; }
+    .upcoming-copy h3 { margin:0 0 15px; font-size:clamp(34px,5vw,62px); line-height:.95; letter-spacing:-.065em; font-weight:750; }
+    .upcoming-copy p { color:#586a78; font-size:13px; line-height:1.7; }
+    .event-link { display:inline-flex; margin-top:12px; padding-bottom:7px; gap:10px; border-bottom:1px solid rgba(22,139,210,.45); color:var(--blue-dark); font-size:10px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; }
+    .show-detail { padding:88px clamp(24px,9vw,136px); background:#17212a; color:#fff; }
+    .show-detail-grid { max-width:1160px; margin:auto; display:grid; grid-template-columns:minmax(0,1fr) minmax(280px,.68fr); gap:clamp(35px,7vw,92px); align-items:center; }
+    .show-detail .section-kicker { color:#9bd3f2; }
+    .show-detail h2 { margin:0 0 15px; color:#fff; font-size:clamp(44px,6vw,74px); }
+    .show-intro { max-width:570px; margin:0 0 27px; color:rgba(255,255,255,.78); font-size:17px; line-height:1.6; }
+    .show-facts { display:grid; gap:0; margin:0 0 27px; padding:0; list-style:none; border-top:1px solid rgba(255,255,255,.16); }
+    .show-facts li { padding:14px 0; border-bottom:1px solid rgba(255,255,255,.16); color:rgba(255,255,255,.84); font-size:13px; line-height:1.6; }
+    .show-facts strong { display:block; margin-bottom:3px; color:#a7d9f5; font-size:9px; letter-spacing:.14em; text-transform:uppercase; }
+    .ticket-note { margin:0 0 18px; color:rgba(255,255,255,.77); font-size:12px; line-height:1.7; }
+    .whatsapp-button { display:inline-flex; align-items:center; gap:11px; padding:14px 20px; color:#fff; background:#25d366; font-size:10px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; transition:background .2s ease; }
+    .whatsapp-button:hover { background:#1fb958; }
+    .whatsapp-button svg { width:19px; height:19px; flex:none; }
+    .show-poster { width:min(100%,390px); justify-self:end; padding:8px; background:#0b0e12; box-shadow:0 22px 55px rgba(0,0,0,.28); }
+    .show-poster img { display:block; width:100%; height:auto; }
     .event-story { padding:92px clamp(24px,9vw,136px) 100px; background:#f6f9fb; }
     .event-grid { max-width:1160px; margin:auto; display:grid; grid-template-columns:minmax(0,1.05fr) minmax(290px,.75fr); gap:clamp(35px,7vw,100px); align-items:center; }
     .event-tag { display:inline-block; margin:0 0 18px; color:var(--blue-dark); font-size:10px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; }
@@ -119,7 +142,30 @@
       .section-note { margin-top:17px; }
       .cards { grid-template-columns:1fr; gap:13px; }
       .card { min-height:310px; }
-      .event-story { padding:70px 22px; }
+      .upcoming-event { display:grid; grid-template-columns:minmax(220px,.7fr) minmax(0,1fr); gap:clamp(26px,5vw,68px); align-items:center; padding:clamp(20px,4vw,38px); border:1px solid var(--line); background:linear-gradient(130deg,#f4f9fc,#e7f2f9); transition:transform .2s ease,box-shadow .2s ease; }
+    .upcoming-event:hover { transform:translateY(-3px); box-shadow:0 16px 36px rgba(23,60,86,.1); }
+    .upcoming-art { width:min(100%,300px); justify-self:center; overflow:hidden; background:#101724; }
+    .upcoming-art img { display:block; width:100%; height:auto; }
+    .upcoming-copy { max-width:570px; }
+    .show-tag { display:inline-block; margin-bottom:17px; color:var(--blue-dark); font-size:10px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; }
+    .upcoming-copy h3 { margin:0 0 15px; font-size:clamp(34px,5vw,62px); line-height:.95; letter-spacing:-.065em; font-weight:750; }
+    .upcoming-copy p { color:#586a78; font-size:13px; line-height:1.7; }
+    .event-link { display:inline-flex; margin-top:12px; padding-bottom:7px; gap:10px; border-bottom:1px solid rgba(22,139,210,.45); color:var(--blue-dark); font-size:10px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; }
+    .show-detail { padding:88px clamp(24px,9vw,136px); background:#17212a; color:#fff; }
+    .show-detail-grid { max-width:1160px; margin:auto; display:grid; grid-template-columns:minmax(0,1fr) minmax(280px,.68fr); gap:clamp(35px,7vw,92px); align-items:center; }
+    .show-detail .section-kicker { color:#9bd3f2; }
+    .show-detail h2 { margin:0 0 15px; color:#fff; font-size:clamp(44px,6vw,74px); }
+    .show-intro { max-width:570px; margin:0 0 27px; color:rgba(255,255,255,.78); font-size:17px; line-height:1.6; }
+    .show-facts { display:grid; gap:0; margin:0 0 27px; padding:0; list-style:none; border-top:1px solid rgba(255,255,255,.16); }
+    .show-facts li { padding:14px 0; border-bottom:1px solid rgba(255,255,255,.16); color:rgba(255,255,255,.84); font-size:13px; line-height:1.6; }
+    .show-facts strong { display:block; margin-bottom:3px; color:#a7d9f5; font-size:9px; letter-spacing:.14em; text-transform:uppercase; }
+    .ticket-note { margin:0 0 18px; color:rgba(255,255,255,.77); font-size:12px; line-height:1.7; }
+    .whatsapp-button { display:inline-flex; align-items:center; gap:11px; padding:14px 20px; color:#fff; background:#25d366; font-size:10px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; transition:background .2s ease; }
+    .whatsapp-button:hover { background:#1fb958; }
+    .whatsapp-button svg { width:19px; height:19px; flex:none; }
+    .show-poster { width:min(100%,390px); justify-self:end; padding:8px; background:#0b0e12; box-shadow:0 22px 55px rgba(0,0,0,.28); }
+    .show-poster img { display:block; width:100%; height:auto; }
+    .event-story { padding:70px 22px; }
       .event-grid { grid-template-columns:1fr; gap:34px; }
       .event-poster { width:min(100%,430px); justify-self:center; }
       .space { padding:72px 24px; }
@@ -151,13 +197,32 @@
     <div class="ticker" aria-hidden="true"><div class="ticker-track"><span>Shows</span><i>✳</i><span>Celebraciones</span><i>✳</i><span>Encuentros</span><i>✳</i><span>Muchas posibilidades</span><i>✳</i><span>Shows</span></div></div>
     <section class="section" id="eventos">
       <div class="section-head">
-        <div><p class="section-kicker">Agenda · Arena Celeste</p><h2>Próximos<br>eventos</h2></div>
-        <p class="section-note">La cartelera se está preparando. Muy pronto vas a encontrar aquí los shows, fechas y toda la información para venir.</p>
+        <div><p class="section-kicker">Próximo show · Arena Celeste</p><h2>Próximamente<br>en vivo</h2></div>
+        <p class="section-note">Música y cuarteto para encontrarnos. Tocá el evento para ver todos los detalles.</p>
       </div>
-      <div class="cards">
-        <article class="card"><div class="card-top"><span class="soon">Próximamente</span><span class="card-number">01</span></div><div class="card-body"><h3>Nuevo show por anunciar</h3><p>En breve compartimos todos los detalles de este próximo encuentro.</p></div><div class="card-foot"><b>Show en vivo</b><span>Fecha a confirmar</span></div></article>
-        <article class="card"><div class="card-top"><span class="soon">Próximamente</span><span class="card-number">02</span></div><div class="card-body"><h3>Una fecha especial</h3><p>Un nuevo evento se suma a la agenda de Arena Celeste.</p></div><div class="card-foot"><b>Evento</b><span>Más información pronto</span></div></article>
-        <article class="card"><div class="card-top"><span class="soon">Próximamente</span><span class="card-number">03</span></div><div class="card-body"><h3>Tu próximo plan</h3><p>Volvé pronto para conocer la programación completa del salón.</p></div><div class="card-foot"><b>Arena Celeste</b><span>En preparación</span></div></article>
+      <a class="upcoming-event" href="#cachumba-detalle" aria-label="Ver información de Cachumba en Arena Celeste">
+        <div class="upcoming-art"><img src="cachumba-rio-cuarto.jpg" alt="Afiche de Cachumba en Arena Celeste, viernes 13 de noviembre"></div>
+        <div class="upcoming-copy"><span class="show-tag">Próximo show · Viernes 13 de noviembre</span><h3>Vuelve el Cachumba a Río Cuarto</h3><p>Una noche imperdible con el Turco Oliva y Cachumba.</p><span class="event-link">Ver información del evento <span>↘</span></span></div>
+      </a>
+    </section>
+    <section class="show-detail" id="cachumba-detalle">
+      <div class="show-detail-grid">
+        <div>
+          <p class="section-kicker">Viernes 13 de noviembre · Arena Celeste</p>
+          <h2>Vuelve el Cachumba a Río Cuarto</h2>
+          <p class="show-intro">Llega una noche imperdible con el Turco Oliva y Cachumba.</p>
+          <ul class="show-facts">
+            <li><strong>Horario</strong>De 1:00 a 5:00 hs · 4 selecciones a puro cuarteto</li>
+            <li><strong>Lugar</strong>Arena Celeste – Club Estudiantes de Río Cuarto</li>
+            <li><strong>Entradas anticipadas</strong>Kiosco Newen y Secretaría del Club Estudiantes</li>
+          </ul>
+          <p class="ticket-note">Consultá por WhatsApp para comprar tu entrada.</p>
+          <a class="whatsapp-button" href="https://wa.me/5493585621059?text=Hola%2C%20quiero%20comprar%20una%20entrada%20para%20Cachumba%20en%20Arena%20Celeste." target="_blank" rel="noopener noreferrer" aria-label="Comprar entrada por WhatsApp al +54 9 3585 62-1059">
+            <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16.04 2.67A12.6 12.6 0 0 0 5.3 21.86L3.62 28l6.29-1.65a12.6 12.6 0 1 0 6.13-23.68Zm0 23.03c-1.96 0-3.89-.53-5.58-1.53l-.4-.24-3.72.98 1-3.63-.26-.42a10.37 10.37 0 1 1 8.96 4.84Zm5.69-7.77c-.31-.16-1.84-.91-2.13-1.01-.29-.11-.5-.16-.71.16-.21.31-.81 1.01-.99 1.22-.18.21-.36.24-.67.08-.31-.16-1.31-.48-2.49-1.53-.92-.82-1.54-1.84-1.72-2.15-.18-.31-.02-.48.14-.64.14-.14.31-.36.47-.54.16-.18.21-.31.31-.52.1-.21.05-.39-.03-.55-.08-.16-.71-1.71-.97-2.34-.26-.62-.52-.53-.71-.54l-.6-.01c-.21 0-.55.08-.84.39-.29.31-1.1 1.07-1.1 2.61s1.13 3.03 1.28 3.24c.16.21 2.22 3.39 5.38 4.76.75.32 1.33.52 1.79.66.75.24 1.43.21 1.97.13.6-.09 1.84-.75 2.1-1.48.26-.73.26-1.35.18-1.48-.08-.13-.29-.21-.6-.37Z"/></svg>
+            Comprar entrada
+          </a>
+        </div>
+        <figure class="show-poster"><img src="cachumba-rio-cuarto.jpg" alt="Afiche oficial del show de Cachumba en Arena Celeste"></figure>
       </div>
     </section>
     <section class="event-story" id="jirafa-fest">
@@ -212,6 +277,7 @@
   </script>
 </body>
 </html>
+
 
 
 
